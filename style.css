@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+.button {
+  background-color: #55c500;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+.open {
+  font-size: 1.5rem;
+}
+
+.close {
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.dialog[open] {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0 0 0 / 16%);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 2rem;
+  width: 35rem;
+}
+
+.dialog::backdrop {
+  background: rgba(0 0 0 / 32%);
+}
